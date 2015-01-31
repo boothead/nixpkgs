@@ -27,7 +27,7 @@ stdenv.mkDerivation rec {
 		homepage = "http://kafka.apache.org";
 		description = "Apache Kafka";
 		license = licenses.asl20;
-		maintainers = [ maintainers.nathan-gs ];	
+		maintainers = [ maintainers.boothead ];	
 		platforms = platforms.unix;	
 	};		
 
