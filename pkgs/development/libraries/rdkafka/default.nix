@@ -11,6 +11,8 @@ stdenv.mkDerivation rec {
     sha256 = "05a83hmpz1xmnln0wa7n11ijn08zxijdvpdswyymxbdlg69w31y1";
   };
 
+  patchPhase = "patchShebangs .";
+  
   buildInputs = [ pkgs.zlib pkgs.perl ];
 
   meta = with stdenv.lib; {
