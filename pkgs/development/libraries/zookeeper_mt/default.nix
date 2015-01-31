@@ -1,7 +1,7 @@
 { stdenv, zookeeper, bash }:
 
 stdenv.mkDerivation rec {
-   name = "zookeeper-mt";
+   name = "zookeeper_mt";
    
    src = zookeeper.src;
    
