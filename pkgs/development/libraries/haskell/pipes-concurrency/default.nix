@@ -4,8 +4,8 @@
 
 cabal.mkDerivation (self: {
   pname = "pipes-concurrency";
-  version = "2.0.2";
-  sha256 = "0g4fbh8dk8ph2ga0vyanqj52rxk9c1zi6g4yk3a1g6bnf4bklhm8";
+  version = "2.0.3";
+  sha256 = "0jsfnlzl6yvhikgn6v361ld9aypv2h2nsz1q24dxfk953zvm2sp5";
   buildDepends = [ pipes stm ];
   testDepends = [ async pipes stm ];
   meta = {
