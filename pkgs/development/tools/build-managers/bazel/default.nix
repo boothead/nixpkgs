@@ -1,4 +1,4 @@
-{ stdenv, lib, fetchurl, jdk, zip, unzip, bash, writeScriptBin, coreutils, makeWrapper, which, python
+{ stdenv, lib, fetchurl, jdk, zip, unzip, bash, writeScriptBin, binutils, coreutils, makeWrapper, which, python
 # Always assume all markers valid (don't redownload dependencies).
 # Also, don't clean up environment variables.
 , enableNixHacks ? false
@@ -83,7 +83,7 @@ stdenv.mkDerivation rec {
   installPhase = ''
     mkdir -p $out/bin
     mv output/bazel $out/bin
-    wrapProgram "$out/bin/bazel" --prefix PATH : "${lib.makeBinPath [ stdenv.cc jdk ]}"
+    wrapProgram "$out/bin/bazel" --prefix PATH : "${lib.makeBinPath [ stdenv.cc jdk binutils ]}"
     mkdir -p $out/share/bash-completion/completions $out/share/zsh/site-functions
     mv output/bazel-complete.bash $out/share/bash-completion/completions/
     cp scripts/zsh_completion/_bazel $out/share/zsh/site-functions/
